@@ -23,4 +23,15 @@ class FormFields(models.Model):
 				)
 				field_name = models.CharField(max_length=100)
 				field_description = models.CharField(max_length=100)
+				field_type = models.CharField(
+								max_length=10,
+								choices=[
+												('0', 'Text'),
+												('1', 'Textarea'),
+												('2', 'Select')
+								],
+								null=True,
+								default=None,
+				)
+				field_choices = models.CharField(max_length=100, null=True)
 				created_at = models.DateTimeField(default=local)
