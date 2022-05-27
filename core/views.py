@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from modernrpc.core import rpc_method
 
-# Create your views here.
+
+@rpc_method
+def form_api(request):
+    pass
+
+
